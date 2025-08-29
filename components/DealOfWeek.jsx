@@ -12,18 +12,18 @@ export default function DealOfWeek() {
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-center">
           <a className="block" href="#">
             <div className="rounded-lg hover-scale animate-on-scroll fade-in-left">
-              <Image src="/images/Gold Testing Machine.png" alt="Deal 1" width={600} height={400} className="rounded-md" />
+              <Image src="/images/Gold Testing Machine.png" alt="Deal 1" width={600} height={400} className=" w-full h-auto max-w-full" />
             </div>
           </a>
           <div className="rounded-lg flex flex-col gap-4">
             <a className="block" href="#">
               <div className="rounded-lg hover-scale animate-on-scroll fade-in-right delay-200">
-                <Image src="/images/Fire Resistant Filing Cabinets.png" alt="Deal 2" width={300} height={200} className="rounded-md" />
+                <Image src="/images/Fire Resistant Filing Cabinets.png" alt="Deal 2" width={300} height={200} className=" w-full h-auto max-w-full" />
               </div>
             </a>
             <a className="block" href="#">
               <div className="rounded-lg hover-scale animate-on-scroll fade-in-right delay-400">
-                <Image src="/images/Currency Counting Machine.png" alt="Deal 3" width={300} height={200} className="rounded-md" />
+                <Image src="/images/Currency Counting Machine.png" alt="Deal 3" width={300} height={200} className=" w-full h-auto max-w-full" />
               </div>
             </a>
           </div>

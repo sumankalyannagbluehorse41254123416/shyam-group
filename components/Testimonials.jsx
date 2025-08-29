@@ -12,10 +12,10 @@ export default function Testimonials() {
             What Our Client's Say
           </h2>
           <div className="flex gap-3 absolute right-0 top-0">
-            <button className="swiper-button-prev-custom h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-dark_red hover:text-white">
+            <button className="swiper-button-prev-custom h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-[var(--dark-red)] hover:text-white">
               <i className="ri-arrow-left-s-line text-xl"></i>
             </button>
-            <button className="swiper-button-next-custom h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-dark_red hover:text-white">
+            <button className="swiper-button-next-custom h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-[var(--dark-red)] hover:text-white">
               <i className="ri-arrow-right-s-line text-xl"></i>
             </button>
           </div>

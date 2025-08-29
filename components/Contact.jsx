@@ -17,24 +17,24 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4 md:mb-6">
                 <div>
                   <label htmlFor="firstName" className="block text-gray-700 mb-2">First Name</label>
-                  <input type="text" id="firstName" className="w-full px-4 py-3 rounded-lg border border-gray-300" placeholder="Your first name" />
+                  <input type="text" id="firstName" className="w-full px-4 py-3 rounded-lg border border-red-900" placeholder="Your first name" />
                 </div>
                 <div>
                   <label htmlFor="lastName" className="block text-gray-700 mb-2">Last Name</label>
-                  <input type="text" id="lastName" className="w-full px-4 py-3 rounded-lg border border-gray-300" placeholder="Your last name" />
+                  <input type="text" id="lastName" className="w-full px-4 py-3 rounded-lg border border-red-900" placeholder="Your last name" />
                 </div>
               </div>
               <div className="mb-4 md:mb-6">
                 <label htmlFor="email" className="block text-gray-700 mb-2">Email Address</label>
-                <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-gray-300" placeholder="you@example.com" />
+                <input type="email" id="email" className="w-full px-4 py-3 rounded-lg border border-red-900" placeholder="you@example.com" />
               </div>
               {/* <div className="mb-4 md:mb-6">
                 <label htmlFor="subject" className="block text-gray-700 mb-2">Subject</label>
-                <input type="text" id="subject" className="w-full px-4 py-3 rounded-lg border border-gray-300" placeholder="What is this regarding?" />
+                <input type="text" id="subject" className="w-full px-4 py-3 rounded-lg border border-red-900" placeholder="What is this regarding?" />
               </div> */}
               <div className="mb-4 md:mb-6">
                 <label htmlFor="message" className="block text-gray-700 mb-2">Your Message</label>
-                <textarea id="message" rows="5" className="w-full px-4 py-3 rounded-lg border border-gray-300" placeholder="Type your message here..."></textarea>
+                <textarea id="message" rows="5" className="w-full px-4 py-3 rounded-lg border border-red-900" placeholder="Type your message here..."></textarea>
               </div>
               <button className="w-full bg-dark_red text-white py-3 px-6 rounded-lg transition duration-300 font-medium">Send Message</button>
             </div>
@@ -43,8 +43,8 @@ export default function Contact() {
             <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 animate-on-scroll fade-in-up delay-100">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-dark_red h-12 w-12 flex justify-center items-center rounded-full mr-4">
+                <div className="flex items-center">
+                  <div className="bg-dark_red h-12 w-12 flex justify-center items-center rounded-full mr-4 flex-shrink-0">
                     <i className="ri-map-pin-2-fill text-white text-xl"></i>
                   </div>
                   <div>
@@ -53,7 +53,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-dark_red h-12 w-12 flex justify-center items-center rounded-full mr-4">
+                  <div className="bg-dark_red h-12 w-12 flex justify-center items-center rounded-full mr-4 flex-shrink-0">
                     <i className="ri-phone-fill text-white text-xl"></i>
                   </div>
                   <div>
@@ -62,7 +62,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-dark_red h-12 w-12 flex justify-center items-center rounded-full mr-4">
+                  <div className="bg-dark_red h-12 w-12 flex justify-center items-center rounded-full mr-4 flex-shrink-0">
                     <i className="ri-mail-fill text-white text-xl"></i>
                   </div>
                   <div>
