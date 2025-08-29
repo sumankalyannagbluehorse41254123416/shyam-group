@@ -73,10 +73,10 @@ export default function Categories() {
             Shop By Categories
           </h2>
           <div className="flex gap-3 absolute right-0 top-0">
-            <button className="category-prev h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-dark_red hover:text-white">
+            <button className="category-prev h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-[var(--dark-red)] hover:text-white">
               <i className="ri-arrow-left-s-line text-xl"></i>
             </button>
-            <button className="category-next h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-dark_red hover:text-white">
+            <button className="category-next h-7 w-7 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-[var(--dark-red)] hover:text-white">
               <i className="ri-arrow-right-s-line text-xl"></i>
             </button>
           </div>
@@ -99,7 +99,6 @@ export default function Categories() {
             { name: 'Strong Room', img: '/images/Strong Room.png' },
             { name: 'Gold Testing', img: '/images/Strong Room-1.png' },
             { name: 'Lockers', img: '/images/Lock.png' },
-            // { name: 'Fling cabinets', img: '/images/currency-handling.jpg' },
           ].map((category, index) => (
             <SwiperSlide key={category.name}>
               <div className={`bg-gray-100 group p-4 group  rounded-lg text-center animate-on-scroll fade-in-up delay-${(index + 1) * 100}`}>

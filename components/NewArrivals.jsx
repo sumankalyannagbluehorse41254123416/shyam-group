@@ -77,10 +77,10 @@ export default function NewArrivals() {
             New Arrivals
           </h2>
           <div className="flex gap-3 absolute right-0 top-0">
-            <button className="arrival-prev h-7 w-7 md:h-10 md:w-10 flex items-center cursor-pointer justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-dark_red hover:text-white">
+            <button className="arrival-prev h-7 w-7 md:h-10 md:w-10 flex items-center cursor-pointer justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-[var(--dark-red)] hover:text-white">
               <i className="ri-arrow-left-s-line text-xl"></i>
             </button>
-            <button className="arrival-next h-7 w-7 md:h-10 md:w-10 flex items-center cursor-pointer justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-dark_red hover:text-white">
+            <button className="arrival-next h-7 w-7 md:h-10 md:w-10 flex items-center cursor-pointer justify-center rounded-full bg-gray-200 shadow-md transition-all hover:bg-[var(--dark-red)] hover:text-white">
               <i className="ri-arrow-right-s-line text-xl"></i>
             </button>
           </div>

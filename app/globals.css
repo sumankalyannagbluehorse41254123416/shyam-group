@@ -1,50 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --dark-red: #a10302;
+    --dark-red: #a10302;
 }
 
 .bg-dark_red {
-  background-color: var(--dark-red);
+    background-color: var(--dark-red);
 }
 
 .text-dark_red {
-  color: var(--dark-red);
+    color: var(--dark-red);
 }
 
-.container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
-}
-@media (max-width: 1320px) {
+/* Define breakpoints correctly */
+@layer base {
     .container {
-        max-width: 1320px;
-    }
-}
-@media (max-width: 1240px) {
-    .container {
-        max-width: 1240px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
-@media (max-width: 950px) {
-    .container {
-        max-width: 950px;
-    }
-}
 
-@media (max-width: 728px) {
-    .container {
-        max-width: 728px;
-    }
-}
-
-@media (max-width: 600px) {
+@media (min-width: 600px) {
     .container {
         max-width: 600px;
     }
 }
 
+@media (min-width: 728px) {
+    .container {
+        max-width: 728px;
+    }
+}
+
+@media (min-width: 950px) {
+    .container {
+        max-width: 950px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* herro section animation */
+@layer utilities {
+  /* Smooth expanding/contracting wave */
+  @keyframes water-wave {
+    0%   { transform: scale(0.95); opacity: 0.25; }
+    50%  { transform: scale(1.05); opacity: 0.15; }
+    100% { transform: scale(0.95); opacity: 0.25; }
+  }
+
+  .animate-water-wave {
+    animation: water-wave 5s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+}

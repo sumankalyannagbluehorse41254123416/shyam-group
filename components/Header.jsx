@@ -18,13 +18,13 @@ export default function Header() {
           </div>
           <nav className="hidden md:flex space-x-10 font-semibold text-md">
             {['Home', 'Shop', 'About', 'Service', 'Blog', 'Contact'].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="text-gray-700 hover:text-dark_red transition">
+              <a key={item} href={`#${item.toLowerCase()}`} className="text-gray-700 hover:text-[var(--dark-red)] transition">
                 {item}
               </a>
             ))}
           </nav>
           <div className="flex items-center space-x-4 md:hidden">
-            <button onClick={toggleMobileMenu} className="p-2 text-gray-700 hover:text-dark_red transition">
+            <button onClick={toggleMobileMenu} className="p-2 text-gray-700 hover:text-[var(--dark-red)]  transition cursor-pointer">
               <svg
                 id="menu-icon"
                 className={`h-8 w-8 ${isMobileMenuOpen ? 'hidden' : ''}`}
