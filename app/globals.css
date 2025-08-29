@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --dark-red: #a10302;
+}
+
+.bg-dark_red {
+  background-color: var(--dark-red);
+}
+
+.text-dark_red {
+  color: var(--dark-red);
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+@media (max-width: 1320px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+@media (max-width: 1240px) {
+    .container {
+        max-width: 1240px;
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        max-width: 950px;
+    }
+}
+
+@media (max-width: 728px) {
+    .container {
+        max-width: 728px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
