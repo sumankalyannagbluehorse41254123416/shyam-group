@@ -1,12 +1,37 @@
 "use client";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import Image from 'next/image';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import Image from "next/image";
 
 export default function Testimonials() {
+  const testimonials = [
+    {
+      name: "Rahul Mehta, Kolkata",
+      rating: 5,
+      qute: "“Excellent Quality & Service”",
+      text: "I purchased a Godrej locker from Shree Shyam Concreto and the experience was seamless. The product is sturdy, reliable, and exactly as promised. Highly recommended!",
+      img: "/images/man1.avif",
+    },
+    {
+      name: "Priya Agarwal, Midnapore",
+      rating: 5,
+      qute: "“Safe Investment for My Business”",
+      text: "The strong room door and safe I bought give me complete peace of mind. The team guided me well and installation was quick. Very professional service.",
+      img: "/images/priya.webp",
+    },
+    {
+      name: "Sanjay Kumar, Kharagpur",
+      rating: 5,
+      qute: "“Trusted Dealer of Godrej Safes”",
+      text: "Authentic products with warranty and after-sales support. I am very satisfied with my purchase and would definitely recommend them to others.",
+      img: "/images/man2.jpg",
+    },
+  ];
+
   return (
     <section className="md:py-16 py-8 bg-white">
       <div className="container mx-auto px-4 relative">
+        {/* Header with Navigation */}
         <div className="flex justify-between items-center mb-12 relative">
           <h2 className="text-xl md:text-3xl font-bold md:text-center text-left w-full animate-on-scroll fade-in-left">
             What Our Client's Say
@@ -20,6 +45,8 @@ export default function Testimonials() {
             </button>
           </div>
         </div>
+
+        {/* Swiper */}
         <Swiper
           modules={[Navigation]}
           spaceBetween={20}
@@ -28,33 +55,52 @@ export default function Testimonials() {
             768: { slidesPerView: 1 },
             1024: { slidesPerView: 3 },
           }}
-          navigation={{ nextEl: '.swiper-button-next-custom', prevEl: '.swiper-button-prev-custom' }}
+          navigation={{
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
+          }}
           className="mySwiper"
         >
-          {[
-            { name: 'Rahul Mehta, Kolkata', rating: '⭐⭐⭐⭐⭐', qute:'“Excellent Quality & Service”', text: 'I purchased a Godrej locker from Shree Shyam Concreto and the experience was seamless. The product is sturdy, reliable, and exactly as promised. Highly recommended!' },
-            { name: 'Priya Agarwal, Midnapore', rating: '⭐⭐⭐⭐⭐', qute:'“Safe Investment for My Business”', text: ' The strong room door and safe I bought give me complete peace of mind. The team guided me well and installation was quick. Very professional service.' },
-            { name: 'Sanjay Kumar, Kharagpur', rating: '⭐⭐⭐⭐⭐',qute:'“Trusted Dealer of Godrej Safes”', text: "Authentic products with warranty and after-sales support. I am very satisfied with my purchase and would definitely recommend them to others." },
-          
-          ].map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <SwiperSlide key={testimonial.name}>
-              <div className={`h-60 bg-gray-50 p-6 rounded-lg border flex flex-col justify-between animate-on-scroll fade-in-up delay-${(index + 1) * 100}`}>
+              <div
+                className={`h-60 bg-gray-50 p-6 rounded-lg border flex flex-col justify-between animate-on-scroll fade-in-up delay-${
+                  (index + 1) * 100
+                }`}
+              >
+                {/* Profile + Rating */}
                 <div className="flex items-center mb-4">
                   <div className="flex items-center justify-center mr-4">
-                    {testimonial.name === 'Another Client' ? (
-                      <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">AB</div>
+                    {testimonial.img ? (
+                      <Image
+                        src={testimonial.img}
+                        alt={testimonial.name}
+                        width={48}
+                        height={48}
+                        className="rounded-full object-cover h-[48px]"
+                      />
                     ) : (
-                      <Image src="/images/man1.avif" alt={testimonial.name} width={48} height={48} className="rounded-full object-cover h-[48px]" />
+                      <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">
+                        {testimonial.name.split(" ")[0][0]}
+                        {testimonial.name.split(" ")[1][0]}
+                      </div>
                     )}
                   </div>
                   <div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
-                    <div className="flex text-yellow-400">{testimonial.rating}</div>
+                    <div className="flex text-yellow-400">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <i key={i} className="ri-star-fill"></i>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                 <p className='text-gray-600 font-bold flex-grow'>{testimonial.qute}</p>
+
+                {/* Quote + Text */}
+                <p className="text-gray-600 font-bold flex-grow">
+                  {testimonial.qute}
+                </p>
                 <p className="text-gray-600 flex-grow">{testimonial.text}</p>
-               
               </div>
             </SwiperSlide>
           ))}

@@ -1,7 +1,7 @@
 "use client";
 export default function LockersAndCabinets() {
   return (
-    <section className="md:py-16 py-8 bg-white">
+    <section className="md:py-16 py-8 bg-grey-100">
       <div className="container mx-auto px-4">
         <div className="md:text-center text-left mb-8">
           <h2 className="text-xl md:text-3xl font-bold mb-2">SAFE LOCKERS & CABINETS</h2>

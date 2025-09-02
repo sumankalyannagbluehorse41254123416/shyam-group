@@ -85,7 +85,7 @@ export default function Home() {
         <Categories />
         <DealOfWeek />
         <NewArrivals />
-        <BestSellers />
+        {/* <BestSellers /> */}
         <Features />
         <Testimonials />
         <About />

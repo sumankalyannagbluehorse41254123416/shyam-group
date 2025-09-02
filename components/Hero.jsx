@@ -19,7 +19,7 @@ export default function Hero() {
             Shop Now
           </button>
 
-          <div className="mt-6 flex items-center space-x-4 animate__animated animate__fadeInUp animate__delay-2s">
+          {/* <div className="mt-6 flex items-center space-x-4 animate__animated animate__fadeInUp animate__delay-2s">
             <span className="text-md">Follow:</span>
             <div className="flex space-x-4">
               {[
@@ -37,7 +37,7 @@ export default function Hero() {
                 </a>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Side */}
