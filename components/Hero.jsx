@@ -1,47 +1,31 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative bg-dark_red text-white py-10 md:py-24 overflow-hidden">
+    <section
+      className="relative bg-dark_red text-white py-10 md:py-24 overflow-hidden"
+      id="home"
+    >
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         {/* Left Side */}
         <div className="md:w-1/2 mb-8 md:mb-0 animate__animated animate__fadeInLeft">
           <h1 className="text-4xl md:text-5xl font-bold mb-10 text-shadow">
-            Industry&apos;s 1st Class E-Safe
+           Godrej Safe & Locker Dealer – Trusted for 18+ Years
           </h1>
-          <p className="text-lg mb-6 max-w-lg animate__animated animate__fadeInUp animate__delay-1s pl-5 border-l-2 border-white">
-            High security safes certified by the Bureau of Indian Standards for
-            protection of cash and valuables. Available with a wide range of
-            locking options for enhanced security.
+          <p className="text-lg mb-6 max-w-xl pl-5 border-l-2 border-white">
+          When it comes to securing valuables, trust matters. As the leading Godrej Safe & Locker Dealer, Shree Shyam Concreto has been serving families, jewellers, offices, and banks for more than 18 years. We provide certified Godrej safes and lockers that ensure lasting protection, security, and peace of mind. We don’t just supply safes—we help safeguard what’s priceless. As your dedicated Godrej Safe & Locker Dealer, your safety becomes our responsibility.
           </p>
-          <button className="bg-white text-dark_red px-6 py-3 rounded-md font-semibold">
-            Shop Now
-          </button>
-
-          {/* <div className="mt-6 flex items-center space-x-4 animate__animated animate__fadeInUp animate__delay-2s">
-            <span className="text-md">Follow:</span>
-            <div className="flex space-x-4">
-              {[
-                "facebook-fill",
-                "twitter-x-fill",
-                "instagram-line",
-                "linkedin-fill",
-              ].map((icon) => (
-                <a
-                  key={icon}
-                  href="#"
-                  className="text-white transition text-2xl"
-                >
-                  <i className={`ri-${icon}`}></i>
-                </a>
-              ))}
-            </div>
-          </div> */}
+        <Link href="#shop" scroll={true} >
+            <button className="bg-white text-dark_red px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-all cursor-pointer">
+              Shop Now
+            </button>
+          </Link>
         </div>
 
         {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center relative animate__animated animate__fadeInRight">
+        <div className="md:w-1/2 flex justify-center relative ">
           {/* Animated Wave Layers */}
           <div className="absolute inset-0 m-auto w-60 h-60 md:w-[400px] md:h-[400px] rounded-full bg-white/20 animate-water-wave"></div>
           <div className="absolute inset-0 m-auto w-80 h-80 md:w-[500px] md:h-[500px] rounded-full bg-white/30 animate-water-wave [animation-delay:600ms]"></div>
@@ -53,6 +37,7 @@ export default function Hero() {
               alt="Shree Shyam"
               width={500}
               height={500}
+              priority
             />
           </div>
         </div>

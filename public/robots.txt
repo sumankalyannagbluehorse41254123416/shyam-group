@@ -1,0 +1,11 @@
+# Generated with robots.txt generator tool by ServerAvatar.com
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+Sitemap: https://godrejlocker.com//sitemap.xml
